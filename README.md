@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# TV Show App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple TV Show content management system built with **React**, **Material-UI**, and **React Router**. Users can search for TV shows, view detailed information, and navigate between popular shows, episodes, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search for TV Shows**: Users can search for TV shows using a debounced search input.
+- **View TV Show Details**: Detailed pages for each TV show, including episodes and cast.
+- **Infinite Scrolling**: Automatically load more TV shows as the user scrolls.
+- **Styled with Material-UI**: A modern look and feel provided by Material-UI components and customization.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** (Frontend library)
+- **Material-UI** (UI components)
+- **React Router** (Routing between pages)
+- **Axios** (Handling API requests)
+- **TVMaze API** (Fetching TV show data)
 
-- Configure the top-level `parserOptions` property like this:
+## Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Before you begin, ensure you have installed the following on your machine:
+
+- [Node.js](https://nodejs.org/) (v14 or above)
+- npm or yarn (depending on your preference)
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Tulika91/bce-webapp.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Navigate to the Project Directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd bce-webapp
 ```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+or
+yarn install
+```
+
+### 4. Run the App
+
+```bash
+npm run dev
+```
+
+### API Integration
+
+This app uses the TVMaze API to fetch TV show data. You don't need an API key; the API is free and open.
+
+### Styling
+
+All styling is handled by Material-UI. You can easily customize the theme, components, and layout by adjusting the sx prop or using the ThemeProvider provided by Material-UI.
+
+### Contributing
+
+Feel free to open issues or create pull requests if you find any bugs or have suggestions for new features.
+
+### License
+
+This project is licensed under the MIT License.
